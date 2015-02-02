@@ -1,0 +1,32 @@
+$background-colour: #e5f0e1;
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after { 
+   clear: both;
+  }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.container {
+	@extend %clearfix;
+	background-color: $background-colour;
+}
+
+.logo {
+    margin: 5%;
+	float: left;
+}
+
+.contact-container {
+	float: right;
+}
